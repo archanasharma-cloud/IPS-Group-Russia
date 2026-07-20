@@ -1,0 +1,739 @@
+/* ==========================================
+   AiNTGreen Website
+   STYLE.CSS - PART 1
+   ========================================== */
+
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#222;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+/* ---------- PPT COLORS ---------- */
+
+:root{
+
+    --dark:#0B6E0B;
+    --green:#19B300;
+    --light:#66FF4D;
+    --white:#ffffff;
+    --grey:#555555;
+
+}
+
+/* ---------- HEADER ---------- */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:#0B6E0B;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 7%;
+
+    z-index:1000;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.25);
+
+}
+
+/* ---------- LOGO ---------- */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo img{
+
+    width:65px;
+
+    height:auto;
+
+}
+
+.logo h2{
+
+    color:white;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
+.logo span{
+
+    color:#66FF4D;
+
+}
+
+/* ---------- MENU ---------- */
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#66FF4D;
+
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+
+    width:100%;
+
+    height:100vh;
+
+    background:
+
+    linear-gradient(rgba(11,110,11,.50),
+
+    rgba(11,110,11,.50)),
+
+    url("images/hero.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:0 8%;
+
+}
+
+.hero-content{
+
+    max-width:950px;
+
+}
+
+.hero h1{
+
+    font-size:65px;
+
+    line-height:1.2;
+
+    margin-bottom:30px;
+
+    font-weight:bold;
+
+}
+
+.hero p{
+
+    font-size:24px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn{
+
+    display:inline-block;
+
+    padding:18px 48px;
+
+    background:#19B300;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    background:white;
+
+    color:#0B6E0B;
+
+}
+
+/* ---------- SECTIONS ---------- */
+
+section{
+
+    padding:90px 8%;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    color:#0B6E0B;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    font-weight:bold;
+
+}
+
+.section-subtitle{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:18px;
+
+    margin-bottom:50px;
+
+}
+
+/* ---------- ABOUT ---------- */
+
+.about{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.about img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.about h2{
+
+    color:#0B6E0B;
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.about p{
+
+    color:#444;
+
+    margin-bottom:18px;
+
+    font-size:18px;
+
+}
+
+/* ---------- CARDS ---------- */
+
+.card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    border-top:6px solid #19B300;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
+
+}
+
+.card h3{
+
+    color:#0B6E0B;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.card p{
+
+    color:#555;
+
+}
+
+/* ---------- GRID ---------- */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+/* ---------- GROUP STRENGTH ---------- */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.stat{
+
+    background:#0B6E0B;
+
+    color:white;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.stat:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat h1{
+
+    color:#66FF4D;
+
+    font-size:50px;
+
+    margin-bottom:15px;
+
+}
+
+.stat p{
+
+    font-size:17px;
+
+}
+
+/* ---------- IMAGE STYLE ---------- */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:992px){
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+
+padding:15px 20px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.hero{
+
+padding:20px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.section-title{
+
+font-size:32px;
+
+}
+
+}
+/* ==========================================
+   STYLE.CSS - PART 2
+   ========================================== */
+
+/* ===== SERVICES & ECOSYSTEM ===== */
+
+.services,
+#ecosystem .grid,
+#services .grid,
+#sector .grid,
+#clients .grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+
+}
+
+.card{
+
+background:#ffffff;
+border-top:5px solid #17B31B;
+border-radius:18px;
+padding:30px;
+transition:.4s;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+.card h3{
+
+color:#0A6D1F;
+margin-bottom:15px;
+font-size:24px;
+
+}
+
+.card p{
+
+color:#555;
+line-height:1.7;
+
+}
+
+/* ===== LIFECYCLE ===== */
+
+.timeline{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:25px;
+margin-top:40px;
+
+}
+
+.step{
+
+background:#0A6D1F;
+color:white;
+padding:30px;
+text-align:center;
+border-radius:18px;
+transition:.4s;
+
+}
+
+.step:hover{
+
+background:#17B31B;
+transform:scale(1.05);
+
+}
+
+.step h3{
+
+font-size:40px;
+color:#A8FF60;
+margin-bottom:10px;
+
+}
+
+/* ===== WHY CHOOSE ===== */
+
+#why{
+
+background:#F6FFF5;
+
+}
+
+/* ===== LEADERSHIP ===== */
+
+.leaders{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:35px;
+margin-top:50px;
+
+}
+
+.leader-card{
+
+background:white;
+text-align:center;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.10);
+transition:.4s;
+
+}
+
+.leader-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.leader-card img{
+
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+margin:auto;
+border:6px solid #17B31B;
+
+}
+
+.leader-card h3{
+
+margin-top:20px;
+font-size:24px;
+color:#0A6D1F;
+
+}
+
+.leader-card p{
+
+color:#666;
+
+}
+
+/* ===== PROJECT LOCATIONS ===== */
+
+#locations{
+
+background:#F7FFF5;
+
+}
+
+/* ===== CONTACT ===== */
+
+#contact{
+
+background:#ffffff;
+
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+
+background:#0A6D1F;
+padding:50px 20px;
+text-align:center;
+color:white;
+
+}
+
+footer img{
+
+width:90px;
+margin:auto;
+margin-bottom:20px;
+
+}
+
+footer h3{
+
+font-size:30px;
+margin-bottom:15px;
+
+}
+
+footer p{
+
+font-size:16px;
+line-height:1.8;
+
+}
+
+/* ===== SCROLLBAR ===== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#F2F2F2;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#17B31B;
+border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#0A6D1F;
+
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.leader-card img{
+
+width:140px;
+height:140px;
+
+}
+
+.section-title{
+
+font-size:32px;
+
+}
+
+}
