@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPS Russia | Global Workforce Solutions</title>
+    <meta name="description" content="IPS Russia - Providing Global Workforce Solutions in Russia">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        /* --- Core Theme Settings --- */
+        :root {
+            --primary-dark: #0F172A;
+            --brand-blue: #0284C7;
+            --accent-gold: #D97706;
+            --banner-bg: #1E293B;
+            --text-dark: #334155;
+            --text-light: #64748B;
+            --bg-light: #F8FAFC;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- Utility UI Elements --- */
+        .btn {
+            display: inline-block;
+            background-color: var(--brand-blue);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: #0369A1;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            padding: 10px 26px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 65px;
+            height: 3px;
+            background-color: var(--brand-blue);
+        }
+
+        .section-title p {
+            max-width: 800px;
+            margin: 15px auto 0 auto;
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        /* --- Sticky Navigation --- */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--brand-blue);
+            margin-left: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--brand-blue);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            padding: 140px 0;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #E2E8F0;
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* --- About Section --- */
+        #about {
+            padding: 90px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .about-grid h3 {
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        .about-grid ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .about-grid ul li {
+            position: relative;
+            padding-left: 25px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .about-grid ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--brand-blue);
+        }
+
+        .about-grid img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        /* --- Stats Counter Grid --- */
+        .stats {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0;
+        }
+
+        .stats .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat h2 {
+            font-size: 2.8rem;
+            color: var(--brand-blue);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            font-size: 1rem;
+            color: #94A3B8;
+        }
+
+        /* --- Services Architecture --- */
+        #services {
+            background-color: var(--bg-light);
+            padding: 90px 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+            border: 1px solid #E2E8F0;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border-color: var(--brand-blue);
+        }
+
+        .card i {
+            font-size: 2rem;
+            color: var(--brand-blue);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* --- Industries Dynamic Array --- */
+        #industries {
+            padding: 90px 0;
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .industry-grid div {
+            background-color: var(--bg-light);
+            border: 1px solid #E2E8F0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--primary-dark);
+            transition: var(--transition);
+        }
+
+        .industry-grid div:hover {
+            background-color: var(--brand-blue);
+            color: var(--white);
+            border-color: var(--brand-blue);
+        }
+
+        /* --- Global Network Flags Area --- */
+        #presence {
+            background-color: var(--bg-light);
+            padding: 90px 0;
+        }
+
+        .presence-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .presence-grid div {
+            background: var(--white);
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid #E2E8F0;
+            font-size: 1.1rem;
+        }
+
+        /* --- Structured Contact Split Row --- */
+        #contact {
+            padding: 90px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .contact-grid div {
+            background-color: var(--white);
+            padding: 35px;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        .contact-grid h3 {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--brand-blue);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .contact-grid p {
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        /* --- Footer Section --- */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0 30px 0;
+            text-align: center;
+        }
+
+        footer h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #94A3B8;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        footer p:last-child {
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: #64748B;
+            border-top: 1px solid #1E293B;
+            padding-top: 20px;
+        }
+
+        /* --- Mobile Responsiveness Setup --- */
+        @media (max-width: 992px) {
+            .about-grid, .service-grid { grid-template-columns: 1fr; }
+            .industry-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; gap: 20px; }
+            .stats .container { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            header .container { flex-direction: column; gap: 15px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-buttons { flex-direction: column; gap: 10px; padding: 0 40px; }
+            .about-grid ul { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fa-solid fa-building-shield" style="color:var(--brand-blue); margin-right:8px; font-size:1.4rem;"></i>
+                IPS<span>Russia</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#presence">Global Presence</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Global Workforce Solutions for Russia</h1>
+            <p>IPS Russia is committed to delivering skilled, semi-skilled and professional manpower to industries across Russia with complete recruitment, mobilization, training and workforce management solutions.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn">Explore More</a>
+                <a href="#contact" class="btn-outline">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About IPS Russia</h2>
+                <p>IPS Russia is one of India's leading international workforce solutions organizations. Backed by over two decades of recruitment experience, IPS delivers reliable manpower solutions for Construction, EPC, Oil & Gas, Manufacturing, Infrastructure, Healthcare, Logistics and Energy sectors.</p>
+            </div>
+            <div class="about-grid">
+                <div>
+                    <h3>Why Choose IPS Russia?</h3>
+                    <ul>
+                        <li>21+ Years of Recruitment Excellence</li>
+                        <li>50+ Lakh Candidate Database</li>
+                        <li>2000+ Monthly Mobilization Capacity</li>
+                        <li>Russian Language Training</li>
+                        <li>Trade Testing Centre</li>
+                        <li>Visa & Immigration Support</li>
+                        <li>End-to-End Workforce Solutions</li>
+                        <li>On Ground Workforce Management</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1547448415-e9f5b28e570d?auto=format&fit=crop&w=600&q=80" alt="Russia Presence Infrastructure">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stat">
+                <h2>21+</h2>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat">
+                <h2>50L+</h2>
+                <p>Candidate Database</p>
+            </div>
+            <div class="stat">
+                <h2>2000+</h2>
+                <p>Monthly Deployment</p>
+            </div>
+            <div class="stat">
+                <h2>600+</h2>
+                <p>Global Clients</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Providing specialized end-to-end personnel supply workflows matching high global standards.</p>
+            </div>
+            <div class="service-grid">
+                <div class="card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>International Recruitment</h3>
+                    <p>Recruitment of skilled and semi-skilled workforce.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-plane"></i>
+                    <h3>Visa Processing</h3>
+                    <p>Complete documentation and immigration support.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-language"></i>
+                    <h3>Russian Language Training</h3>
+                    <p>Industry specific communication training.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-industry"></i>
+                    <h3>Trade Testing</h3>
+                    <p>Skill assessment and certification.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-building"></i>
+                    <h3>Bulk Hiring</h3>
+                    <p>Large scale workforce deployment.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>Workforce Management</h3>
+                    <p>Complete on-site workforce support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="industries">
+        <div class="container">
+            <div class="section-title">
+                <h2>Industries We Serve</h2>
+            </div>
+            <div class="industry-grid">
+                <div>Oil & Gas</div>
+                <div>Power</div>
+                <div>Construction</div>
+                <div>Infrastructure</div>
+                <div>Mining</div>
+                <div>Manufacturing</div>
+                <div>Healthcare</div>
+                <div>Retail</div>
+                <div>Logistics</div>
+                <div>Heavy Engineering</div>
+                <div>Information Technology</div>
+                <div>Nuclear Projects</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="presence">
+        <div class="container">
+            <div class="section-title">
+                <h2>Global Presence</h2>
+                <p>Our interconnected operational network stretches across prominent corporate territories worldwide.</p>
+            </div>
+            <div class="presence-grid">
+                <div>🇮🇳 India</div>
+                <div>🇷🇺 Russia</div>
+                <div>🇶🇦 Qatar</div>
+                <div>🇸🇦 Saudi Arabia</div>
+                <div>🇦🇪 UAE</div>
+                <div>🇳🇱 Netherlands</div>
+                <div>🇺🇸 USA</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-grid">
+                <div>
+                    <h3>India Office</h3>
+                    <p>Whispering Palms Shopping Complex,</p>
+                    <p>Kandivali East,</p>
+                    <p>Mumbai, India</p>
+                </div>
+                <div>
+                    <h3>Russia Office</h3>
+                    <p>4th Magistralnaya Street,</p>
+                    <p>Building 11, Room 1C,</p>
+                    <p>Moscow, Russia</p>
+                </div>
+                <div>
+                    <h3>Email</h3>
+                    <p style="font-weight:600; color:var(--brand-blue);">victor.verma@ipsl-global.com</p>
+                    <p style="font-weight:600; color:var(--brand-blue);">ashok.dash@ipsgroup.co.in</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>IPS Russia</h2>
+            <p style="color:var(--brand-blue); font-weight:500;">Global Workforce Solutions</p>
+            <p>&copy; 2026 IPS Russia. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetHref = this.getAttribute('href');
+                    if (targetHref.startsWith('#') && targetHref.length > 1) {
+                        e.preventDefault();
+                        const targetSection = document.querySelector(targetHref);
+                        if (targetSection) {
+                            window.scrollTo({
+                                top: targetSection.offsetTop - 90,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            const cards = document.querySelectorAll('.card, .industry-grid div, .contact-grid div');
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const elementObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry, idx) => {
+                    if(entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                elementObserver.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
