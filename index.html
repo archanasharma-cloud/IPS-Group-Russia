@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPS Russia | Global Workforce Solutions</title>
-    <meta name="description" content="IPS Russia - Providing Global Workforce Solutions in Russia">
+    <title>IPS Russia | Глобальные кадровые решения</title>
+    <meta name="description" content="IPS Russia - Глобальные кадровые решения в России">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -165,10 +165,36 @@
             color: var(--brand-blue);
         }
 
+        /* --- Language Dropdown --- */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .lang-select {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            background-color: var(--white);
+            border: 1px solid #CBD5E1;
+            border-radius: 6px;
+            padding: 10px 12px;
+            cursor: pointer;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .lang-select:hover,
+        .lang-select:focus {
+            border-color: var(--brand-blue);
+        }
+
         /* --- Hero Section --- */
         .hero {
             position: relative;
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
                         url('https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             padding: 140px 0;
             text-align: center;
@@ -461,25 +487,31 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#industries">Industries</a></li>
-                    <li><a href="#presence">Global Presence</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" data-i18n="nav_home">Главная</a></li>
+                    <li><a href="#about" data-i18n="nav_about">О нас</a></li>
+                    <li><a href="#services" data-i18n="nav_services">Услуги</a></li>
+                    <li><a href="#industries" data-i18n="nav_industries">Отрасли</a></li>
+                    <li><a href="#presence" data-i18n="nav_presence">Глобальное присутствие</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Контакты</a></li>
                 </ul>
             </nav>
-            <a href="#contact" class="btn">Contact Us</a>
+            <div class="header-actions">
+                <select id="langSelect" class="lang-select" aria-label="Language / Язык">
+                    <option value="ru" selected>Russian</option>
+                    <option value="en">English</option>
+                </select>
+                <a href="#contact" class="btn" data-i18n="btn_contact_us">Связаться с нами</a>
+            </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Global Workforce Solutions for Russia</h1>
-            <p>IPS Russia is committed to delivering skilled, semi-skilled and professional manpower to industries across Russia with complete recruitment, mobilization, training and workforce management solutions.</p>
+            <h1 data-i18n="hero_title">Глобальные кадровые решения для России</h1>
+            <p data-i18n="hero_text">IPS Russia стремится предоставлять квалифицированных, полуквалифицированных и профессиональных специалистов предприятиям по всей России, обеспечивая полный комплекс решений по подбору, мобилизации, обучению и управлению персоналом.</p>
             <div class="hero-buttons">
-                <a href="#about" class="btn">Explore More</a>
-                <a href="#contact" class="btn-outline">Get in Touch</a>
+                <a href="#about" class="btn" data-i18n="btn_explore">Узнать больше</a>
+                <a href="#contact" class="btn-outline" data-i18n="btn_touch">Связаться</a>
             </div>
         </div>
     </section>
@@ -487,21 +519,21 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About IPS Russia</h2>
-                <p>IPS Russia is one of India's leading international workforce solutions organizations. Backed by over two decades of recruitment experience, IPS delivers reliable manpower solutions for Construction, EPC, Oil & Gas, Manufacturing, Infrastructure, Healthcare, Logistics and Energy sectors.</p>
+                <h2 data-i18n="about_title">О компании IPS Russia</h2>
+                <p data-i18n="about_text">IPS Russia — одна из ведущих индийских организаций в области международных кадровых решений. Опираясь на более чем двадцатилетний опыт подбора персонала, IPS предлагает надежные решения по обеспечению рабочей силой для секторов строительства, EPC, нефти и газа, производства, инфраструктуры, здравоохранения, логистики и энергетики.</p>
             </div>
             <div class="about-grid">
                 <div>
-                    <h3>Why Choose IPS Russia?</h3>
+                    <h3 data-i18n="why_title">Почему выбирают IPS Russia?</h3>
                     <ul>
-                        <li>21+ Years of Recruitment Excellence</li>
-                        <li>50+ Lakh Candidate Database</li>
-                        <li>2000+ Monthly Mobilization Capacity</li>
-                        <li>Russian Language Training</li>
-                        <li>Trade Testing Centre</li>
-                        <li>Visa & Immigration Support</li>
-                        <li>End-to-End Workforce Solutions</li>
-                        <li>On Ground Workforce Management</li>
+                        <li data-i18n="why_1">21+ год превосходства в подборе персонала</li>
+                        <li data-i18n="why_2">База кандидатов более 5 млн человек</li>
+                        <li data-i18n="why_3">Мощность мобилизации 2000+ человек в месяц</li>
+                        <li data-i18n="why_4">Обучение русскому языку</li>
+                        <li data-i18n="why_5">Центр тестирования профессиональных навыков</li>
+                        <li data-i18n="why_6">Визовая и иммиграционная поддержка</li>
+                        <li data-i18n="why_7">Комплексные кадровые решения «под ключ»</li>
+                        <li data-i18n="why_8">Управление персоналом на местах</li>
                     </ul>
                 </div>
                 <div>
@@ -515,19 +547,19 @@
         <div class="container">
             <div class="stat">
                 <h2>21+</h2>
-                <p>Years Experience</p>
+                <p data-i18n="stat_1">Лет опыта</p>
             </div>
             <div class="stat">
-                <h2>50L+</h2>
-                <p>Candidate Database</p>
+                <h2 data-i18n="stat_2_num">5 млн+</h2>
+                <p data-i18n="stat_2">База кандидатов</p>
             </div>
             <div class="stat">
                 <h2>2000+</h2>
-                <p>Monthly Deployment</p>
+                <p data-i18n="stat_3">Отправка специалистов в месяц</p>
             </div>
             <div class="stat">
                 <h2>600+</h2>
-                <p>Global Clients</p>
+                <p data-i18n="stat_4">Клиентов по всему миру</p>
             </div>
         </div>
     </section>
@@ -535,39 +567,39 @@
     <section id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
-                <p>Providing specialized end-to-end personnel supply workflows matching high global standards.</p>
+                <h2 data-i18n="services_title">Наши услуги</h2>
+                <p data-i18n="services_text">Мы предлагаем специализированные комплексные процессы обеспечения персоналом, соответствующие высоким мировым стандартам.</p>
             </div>
             <div class="service-grid">
                 <div class="card">
                     <i class="fa-solid fa-users"></i>
-                    <h3>International Recruitment</h3>
-                    <p>Recruitment of skilled and semi-skilled workforce.</p>
+                    <h3 data-i18n="srv_1_t">Международный подбор персонала</h3>
+                    <p data-i18n="srv_1_p">Подбор квалифицированных и полуквалифицированных работников.</p>
                 </div>
                 <div class="card">
                     <i class="fa-solid fa-plane"></i>
-                    <h3>Visa Processing</h3>
-                    <p>Complete documentation and immigration support.</p>
+                    <h3 data-i18n="srv_2_t">Оформление виз</h3>
+                    <p data-i18n="srv_2_p">Полное документальное и иммиграционное сопровождение.</p>
                 </div>
                 <div class="card">
                     <i class="fa-solid fa-language"></i>
-                    <h3>Russian Language Training</h3>
-                    <p>Industry specific communication training.</p>
+                    <h3 data-i18n="srv_3_t">Обучение русскому языку</h3>
+                    <p data-i18n="srv_3_p">Отраслевое обучение профессиональному общению.</p>
                 </div>
                 <div class="card">
                     <i class="fa-solid fa-industry"></i>
-                    <h3>Trade Testing</h3>
-                    <p>Skill assessment and certification.</p>
+                    <h3 data-i18n="srv_4_t">Тестирование навыков</h3>
+                    <p data-i18n="srv_4_p">Оценка навыков и сертификация.</p>
                 </div>
                 <div class="card">
                     <i class="fa-solid fa-building"></i>
-                    <h3>Bulk Hiring</h3>
-                    <p>Large scale workforce deployment.</p>
+                    <h3 data-i18n="srv_5_t">Массовый подбор</h3>
+                    <p data-i18n="srv_5_p">Крупномасштабное развертывание персонала.</p>
                 </div>
                 <div class="card">
                     <i class="fa-solid fa-globe"></i>
-                    <h3>Workforce Management</h3>
-                    <p>Complete on-site workforce support.</p>
+                    <h3 data-i18n="srv_6_t">Управление персоналом</h3>
+                    <p data-i18n="srv_6_p">Полная поддержка персонала на объекте.</p>
                 </div>
             </div>
         </div>
@@ -576,21 +608,21 @@
     <section id="industries">
         <div class="container">
             <div class="section-title">
-                <h2>Industries We Serve</h2>
+                <h2 data-i18n="ind_title">Отрасли, которые мы обслуживаем</h2>
             </div>
             <div class="industry-grid">
-                <div>Oil & Gas</div>
-                <div>Power</div>
-                <div>Construction</div>
-                <div>Infrastructure</div>
-                <div>Mining</div>
-                <div>Manufacturing</div>
-                <div>Healthcare</div>
-                <div>Retail</div>
-                <div>Logistics</div>
-                <div>Heavy Engineering</div>
-                <div>Information Technology</div>
-                <div>Nuclear Projects</div>
+                <div data-i18n="ind_1">Нефть и газ</div>
+                <div data-i18n="ind_2">Энергетика</div>
+                <div data-i18n="ind_3">Строительство</div>
+                <div data-i18n="ind_4">Инфраструктура</div>
+                <div data-i18n="ind_5">Горнодобывающая промышленность</div>
+                <div data-i18n="ind_6">Производство</div>
+                <div data-i18n="ind_7">Здравоохранение</div>
+                <div data-i18n="ind_8">Розничная торговля</div>
+                <div data-i18n="ind_9">Логистика</div>
+                <div data-i18n="ind_10">Тяжелое машиностроение</div>
+                <div data-i18n="ind_11">Информационные технологии</div>
+                <div data-i18n="ind_12">Ядерные проекты</div>
             </div>
         </div>
     </section>
@@ -598,17 +630,17 @@
     <section id="presence">
         <div class="container">
             <div class="section-title">
-                <h2>Global Presence</h2>
-                <p>Our interconnected operational network stretches across prominent corporate territories worldwide.</p>
+                <h2 data-i18n="pres_title">Глобальное присутствие</h2>
+                <p data-i18n="pres_text">Наша взаимосвязанная операционная сеть охватывает ведущие деловые регионы по всему миру.</p>
             </div>
             <div class="presence-grid">
-                <div>India</div>
-                <div> Russia</div>
-                <div>Qatar</div>
-                <div>Saudi Arabia</div>
-                <div> UAE</div>
-                <div>Netherlands</div>
-                <div>USA</div>
+                <div data-i18n="c_india">Индия</div>
+                <div data-i18n="c_russia">Россия</div>
+                <div data-i18n="c_qatar">Катар</div>
+                <div data-i18n="c_saudi">Саудовская Аравия</div>
+                <div data-i18n="c_uae">ОАЭ</div>
+                <div data-i18n="c_nl">Нидерланды</div>
+                <div data-i18n="c_usa">США</div>
             </div>
         </div>
     </section>
@@ -616,23 +648,23 @@
     <section id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Contact Us</h2>
+                <h2 data-i18n="contact_title">Свяжитесь с нами</h2>
             </div>
             <div class="contact-grid">
                 <div>
-                    <h3>India Office</h3>
-                    <p>Whispering Palms Shopping Complex,</p>
-                    <p>Kandivali East,</p>
-                    <p>Mumbai, India</p>
+                    <h3 data-i18n="off_in_t">Офис в Индии</h3>
+                    <p data-i18n="off_in_1">Whispering Palms Shopping Complex,</p>
+                    <p data-i18n="off_in_2">Кандивали Ист,</p>
+                    <p data-i18n="off_in_3">Мумбаи, Индия</p>
                 </div>
                 <div>
-                    <h3>Russia Office</h3>
-                    <p>4th Magistralnaya Street,</p>
-                    <p>Building 11, Room 1C,</p>
-                    <p>Moscow, Russia</p>
+                    <h3 data-i18n="off_ru_t">Офис в России</h3>
+                    <p data-i18n="off_ru_1">4-я Магистральная улица,</p>
+                    <p data-i18n="off_ru_2">здание 11, помещение 1С,</p>
+                    <p data-i18n="off_ru_3">Москва, Россия</p>
                 </div>
                 <div>
-                    <h3>Email</h3>
+                    <h3 data-i18n="email_t">Электронная почта</h3>
                     <p style="font-weight:600; color:var(--brand-blue);">victor.verma@ipsl-global.com</p>
                     <p style="font-weight:600; color:var(--brand-blue);">ashok.dash@ipsgroup.co.in</p>
                 </div>
@@ -643,13 +675,129 @@
     <footer>
         <div class="container">
             <h2>IPS Russia</h2>
-            <p style="color:var(--brand-blue); font-weight:500;">Global Workforce Solutions</p>
-            <p>&copy; 2026 IPS Russia. All Rights Reserved.</p>
+            <p style="color:var(--brand-blue); font-weight:500;" data-i18n="footer_tag">Глобальные кадровые решения</p>
+            <p data-i18n="footer_copy">&copy; 2026 IPS Russia. Все права защищены.</p>
         </div>
     </footer>
 
     <script>
+        /* --- Language Dictionary (Russian = default, English = option) --- */
+        const translations = {
+            ru: {
+                page_title: "IPS Russia | Глобальные кадровые решения",
+                page_desc: "IPS Russia - Глобальные кадровые решения в России",
+                nav_home: "Главная", nav_about: "О нас", nav_services: "Услуги", nav_industries: "Отрасли",
+                nav_presence: "Глобальное присутствие", nav_contact: "Контакты",
+                btn_contact_us: "Связаться с нами",
+                hero_title: "Глобальные кадровые решения для России",
+                hero_text: "IPS Russia стремится предоставлять квалифицированных, полуквалифицированных и профессиональных специалистов предприятиям по всей России, обеспечивая полный комплекс решений по подбору, мобилизации, обучению и управлению персоналом.",
+                btn_explore: "Узнать больше", btn_touch: "Связаться",
+                about_title: "О компании IPS Russia",
+                about_text: "IPS Russia — одна из ведущих индийских организаций в области международных кадровых решений. Опираясь на более чем двадцатилетний опыт подбора персонала, IPS предлагает надежные решения по обеспечению рабочей силой для секторов строительства, EPC, нефти и газа, производства, инфраструктуры, здравоохранения, логистики и энергетики.",
+                why_title: "Почему выбирают IPS Russia?",
+                why_1: "21+ год превосходства в подборе персонала",
+                why_2: "База кандидатов более 5 млн человек",
+                why_3: "Мощность мобилизации 2000+ человек в месяц",
+                why_4: "Обучение русскому языку",
+                why_5: "Центр тестирования профессиональных навыков",
+                why_6: "Визовая и иммиграционная поддержка",
+                why_7: "Комплексные кадровые решения «под ключ»",
+                why_8: "Управление персоналом на местах",
+                stat_1: "Лет опыта", stat_2_num: "5 млн+", stat_2: "База кандидатов",
+                stat_3: "Отправка специалистов в месяц", stat_4: "Клиентов по всему миру",
+                services_title: "Наши услуги",
+                services_text: "Мы предлагаем специализированные комплексные процессы обеспечения персоналом, соответствующие высоким мировым стандартам.",
+                srv_1_t: "Международный подбор персонала", srv_1_p: "Подбор квалифицированных и полуквалифицированных работников.",
+                srv_2_t: "Оформление виз", srv_2_p: "Полное документальное и иммиграционное сопровождение.",
+                srv_3_t: "Обучение русскому языку", srv_3_p: "Отраслевое обучение профессиональному общению.",
+                srv_4_t: "Тестирование навыков", srv_4_p: "Оценка навыков и сертификация.",
+                srv_5_t: "Массовый подбор", srv_5_p: "Крупномасштабное развертывание персонала.",
+                srv_6_t: "Управление персоналом", srv_6_p: "Полная поддержка персонала на объекте.",
+                ind_title: "Отрасли, которые мы обслуживаем",
+                ind_1: "Нефть и газ", ind_2: "Энергетика", ind_3: "Строительство", ind_4: "Инфраструктура",
+                ind_5: "Горнодобывающая промышленность", ind_6: "Производство", ind_7: "Здравоохранение",
+                ind_8: "Розничная торговля", ind_9: "Логистика", ind_10: "Тяжелое машиностроение",
+                ind_11: "Информационные технологии", ind_12: "Ядерные проекты",
+                pres_title: "Глобальное присутствие",
+                pres_text: "Наша взаимосвязанная операционная сеть охватывает ведущие деловые регионы по всему миру.",
+                c_india: "Индия", c_russia: "Россия", c_qatar: "Катар", c_saudi: "Саудовская Аравия",
+                c_uae: "ОАЭ", c_nl: "Нидерланды", c_usa: "США",
+                contact_title: "Свяжитесь с нами",
+                off_in_t: "Офис в Индии", off_in_1: "Whispering Palms Shopping Complex,", off_in_2: "Кандивали Ист,", off_in_3: "Мумбаи, Индия",
+                off_ru_t: "Офис в России", off_ru_1: "4-я Магистральная улица,", off_ru_2: "здание 11, помещение 1С,", off_ru_3: "Москва, Россия",
+                email_t: "Электронная почта",
+                footer_tag: "Глобальные кадровые решения",
+                footer_copy: "© 2026 IPS Russia. Все права защищены."
+            },
+            en: {
+                page_title: "IPS Russia | Global Workforce Solutions",
+                page_desc: "IPS Russia - Providing Global Workforce Solutions in Russia",
+                nav_home: "Home", nav_about: "About", nav_services: "Services", nav_industries: "Industries",
+                nav_presence: "Global Presence", nav_contact: "Contact",
+                btn_contact_us: "Contact Us",
+                hero_title: "Global Workforce Solutions for Russia",
+                hero_text: "IPS Russia is committed to delivering skilled, semi-skilled and professional manpower to industries across Russia with complete recruitment, mobilization, training and workforce management solutions.",
+                btn_explore: "Explore More", btn_touch: "Get in Touch",
+                about_title: "About IPS Russia",
+                about_text: "IPS Russia is one of India's leading international workforce solutions organizations. Backed by over two decades of recruitment experience, IPS delivers reliable manpower solutions for Construction, EPC, Oil & Gas, Manufacturing, Infrastructure, Healthcare, Logistics and Energy sectors.",
+                why_title: "Why Choose IPS Russia?",
+                why_1: "21+ Years of Recruitment Excellence",
+                why_2: "50+ Lakh Candidate Database",
+                why_3: "2000+ Monthly Mobilization Capacity",
+                why_4: "Russian Language Training",
+                why_5: "Trade Testing Centre",
+                why_6: "Visa & Immigration Support",
+                why_7: "End-to-End Workforce Solutions",
+                why_8: "On Ground Workforce Management",
+                stat_1: "Years Experience", stat_2_num: "50L+", stat_2: "Candidate Database",
+                stat_3: "Monthly Deployment", stat_4: "Global Clients",
+                services_title: "Our Services",
+                services_text: "Providing specialized end-to-end personnel supply workflows matching high global standards.",
+                srv_1_t: "International Recruitment", srv_1_p: "Recruitment of skilled and semi-skilled workforce.",
+                srv_2_t: "Visa Processing", srv_2_p: "Complete documentation and immigration support.",
+                srv_3_t: "Russian Language Training", srv_3_p: "Industry specific communication training.",
+                srv_4_t: "Trade Testing", srv_4_p: "Skill assessment and certification.",
+                srv_5_t: "Bulk Hiring", srv_5_p: "Large scale workforce deployment.",
+                srv_6_t: "Workforce Management", srv_6_p: "Complete on-site workforce support.",
+                ind_title: "Industries We Serve",
+                ind_1: "Oil & Gas", ind_2: "Power", ind_3: "Construction", ind_4: "Infrastructure",
+                ind_5: "Mining", ind_6: "Manufacturing", ind_7: "Healthcare",
+                ind_8: "Retail", ind_9: "Logistics", ind_10: "Heavy Engineering",
+                ind_11: "Information Technology", ind_12: "Nuclear Projects",
+                pres_title: "Global Presence",
+                pres_text: "Our interconnected operational network stretches across prominent corporate territories worldwide.",
+                c_india: "India", c_russia: "Russia", c_qatar: "Qatar", c_saudi: "Saudi Arabia",
+                c_uae: "UAE", c_nl: "Netherlands", c_usa: "USA",
+                contact_title: "Contact Us",
+                off_in_t: "India Office", off_in_1: "Whispering Palms Shopping Complex,", off_in_2: "Kandivali East,", off_in_3: "Mumbai, India",
+                off_ru_t: "Russia Office", off_ru_1: "4th Magistralnaya Street,", off_ru_2: "Building 11, Room 1C,", off_ru_3: "Moscow, Russia",
+                email_t: "Email",
+                footer_tag: "Global Workforce Solutions",
+                footer_copy: "© 2026 IPS Russia. All Rights Reserved."
+            }
+        };
+
+        function setLanguage(lang) {
+            const dict = translations[lang] || translations.ru;
+            document.documentElement.lang = lang;
+            document.title = dict.page_title;
+            const meta = document.querySelector('meta[name="description"]');
+            if (meta) meta.setAttribute('content', dict.page_desc);
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key] !== undefined) el.textContent = dict[key];
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            /* Language dropdown: Russian is default, English is optional */
+            const langSelect = document.getElementById('langSelect');
+            langSelect.value = 'ru';
+            setLanguage('ru');
+            langSelect.addEventListener('change', function() {
+                setLanguage(this.value);
+            });
+
             const navLinks = document.querySelectorAll('nav ul li a');
             
             navLinks.forEach(link => {
